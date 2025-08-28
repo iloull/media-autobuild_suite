@@ -31,9 +31,9 @@ SOURCE_REPO_FREI0R=https://github.com/dyne/frei0r.git
 SOURCE_REPO_FRIBIDI=https://github.com/fribidi/fribidi.git
 SOURCE_REPO_GFLAGS=https://github.com/gflags/gflags.git
 SOURCE_REPO_GIFSKI=https://github.com/ImageOptim/gifski.git
-SOURCE_REPO_GLSLANG=https://github.com/KhronosGroup/glslang.git
+SOURCE_REPO_GLSLANG=https://github.com/KhronosGroup/glslang.git#tag=15.4.0
 SOURCE_REPO_GPAC=https://github.com/gpac/gpac.git
-SOURCE_REPO_HARFBUZZ=https://github.com/harfbuzz/harfbuzz.git
+SOURCE_REPO_HARFBUZZ=https://github.com/harfbuzz/harfbuzz.git#tag=11.4.4
 SOURCE_REPO_HDR10PLUS_TOOL=https://github.com/quietvoid/hdr10plus_tool.git
 SOURCE_REPO_JO=https://github.com/jpmens/jo.git
 SOURCE_REPO_JQ=https://github.com/jqlang/jq.git
@@ -41,7 +41,7 @@ SOURCE_REPO_LENSFUN=https://github.com/lensfun/lensfun.git
 SOURCE_REPO_LEPT=https://github.com/DanBloomberg/leptonica.git
 SOURCE_REPO_LIBAACS=https://code.videolan.org/videolan/libaacs.git
 SOURCE_REPO_LIBAOM=https://aomedia.googlesource.com/aom
-SOURCE_REPO_LIBASS=https://github.com/libass/libass.git
+SOURCE_REPO_LIBASS=https://github.com/libass/libass.git#tag=0.17.4
 SOURCE_REPO_LIBAVIF=https://github.com/AOMediaCodec/libavif.git
 SOURCE_REPO_LIBBDPLUS=https://code.videolan.org/videolan/libbdplus.git
 SOURCE_REPO_LIBBLURAY=https://code.videolan.org/videolan/libbluray.git
@@ -52,7 +52,7 @@ SOURCE_REPO_LIBDVDREAD=https://code.videolan.org/videolan/libdvdread.git
 SOURCE_REPO_LIBGLUT=https://github.com/dcnieho/FreeGLUT.git
 SOURCE_REPO_LIBHEIF=https://github.com/strukturag/libheif.git
 SOURCE_REPO_LIBILBC=https://github.com/TimothyGu/libilbc.git
-SOURCE_REPO_LIBJXL=https://github.com/libjxl/libjxl.git
+SOURCE_REPO_LIBJXL=https://github.com/libjxl/libjxl.git#tag=v0.11.1
 SOURCE_REPO_LIBKVAZAAR=https://github.com/ultravideo/kvazaar.git
 SOURCE_REPO_LIBLC3=https://github.com/google/liblc3.git
 SOURCE_REPO_LIBLSMASH=https://github.com/l-smash/l-smash.git
@@ -75,8 +75,8 @@ SOURCE_REPO_LIBVMAF=https://github.com/Netflix/vmaf.git
 SOURCE_REPO_LIBVORBIS=https://github.com/xiph/vorbis.git
 SOURCE_REPO_LIBVPL=https://github.com/intel/libvpl.git
 SOURCE_REPO_LIBVVDEC=https://github.com/fraunhoferhhi/vvdec.git
-SOURCE_REPO_LIBVVENC=https://github.com/fraunhoferhhi/vvenc.git
-SOURCE_REPO_LIBWEBP=https://chromium.googlesource.com/webm/libwebp
+SOURCE_REPO_LIBVVENC=https://github.com/fraunhoferhhi/vvenc.git#tag=v1.13.1
+SOURCE_REPO_LIBWEBP=https://chromium.googlesource.com/webm/libwebp#tag=v1.6.0
 SOURCE_REPO_LIBXML2=https://gitlab.gnome.org/GNOME/libxml2.git
 SOURCE_REPO_LIBZEN=https://github.com/MediaArea/ZenLib.git
 SOURCE_REPO_LUAJIT=https://github.com/LuaJIT/LuaJIT.git
@@ -86,7 +86,7 @@ SOURCE_REPO_MINIZIPNG=https://github.com/zlib-ng/minizip-ng.git
 SOURCE_REPO_MPV=https://github.com/mpv-player/mpv.git
 SOURCE_REPO_MUJS=https://codeberg.org/ccxvii/mujs.git
 SOURCE_REPO_NEON=https://github.com/notroj/neon.git
-SOURCE_REPO_OPENAL=https://github.com/kcat/openal-soft.git
+SOURCE_REPO_OPENAL=https://github.com/kcat/openal-soft.git#tag=latest
 SOURCE_REPO_OPENAPV=https://github.com/AcademySoftwareFoundation/openapv.git
 SOURCE_REPO_OPENCLHEADERS=https://github.com/KhronosGroup/OpenCL-Headers.git
 SOURCE_REPO_OPUS=https://gitlab.xiph.org/xiph/opus.git
@@ -104,7 +104,7 @@ SOURCE_REPO_SPIRV_CROSS=https://github.com/KhronosGroup/SPIRV-Cross.git
 SOURCE_REPO_SPIRV_HEADERS=https://github.com/KhronosGroup/SPIRV-Headers.git
 SOURCE_REPO_SPIRV_TOOLS=https://github.com/KhronosGroup/SPIRV-Tools.git
 SOURCE_REPO_SRT=https://github.com/Haivision/srt.git
-SOURCE_REPO_SVTAV1=https://gitlab.com/AOMediaCodec/SVT-AV1.git
+SOURCE_REPO_SVTAV1=https://gitlab.com/AOMediaCodec/SVT-AV1.git#tag=v2.3.0
 SOURCE_REPO_SVTHEVC=https://github.com/OpenVisualCloud/SVT-HEVC.git
 SOURCE_REPO_SVTVP9=https://github.com/OpenVisualCloud/SVT-VP9.git
 SOURCE_REPO_TESSERACT=https://github.com/tesseract-ocr/tesseract.git
@@ -113,8 +113,8 @@ SOURCE_REPO_URIPARSER=https://github.com/uriparser/uriparser.git
 SOURCE_REPO_UVG266=https://github.com/ultravideo/uvg266.git
 SOURCE_REPO_VIDSTAB=https://github.com/georgmartius/vid.stab.git
 SOURCE_REPO_VORBIS_TOOLS=https://github.com/xiph/vorbis-tools.git
-SOURCE_REPO_VPX=https://chromium.googlesource.com/webm/libvpx
-SOURCE_REPO_VULKANLOADER=https://github.com/KhronosGroup/Vulkan-Loader.git
+SOURCE_REPO_VPX=https://chromium.googlesource.com/webm/libvpx#tag=v1.15.2
+SOURCE_REPO_VULKANLOADER=https://github.com/KhronosGroup/Vulkan-Loader.git#tag=v1.4.325
 SOURCE_REPO_VVC=https://gitlab.com/m-ab-s/VVCSoftware_VTM.git
 SOURCE_REPO_X264=https://code.videolan.org/videolan/x264.git
 SOURCE_REPO_X265=https://bitbucket.org/multicoreware/x265_git.git

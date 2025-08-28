@@ -20,6 +20,7 @@ update_suite.sh
 
 ## VS Code
 .vscode
+.idea/
 
 #############
 ## Windows detritus
