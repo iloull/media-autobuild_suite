@@ -2466,16 +2466,22 @@ if [[ $ffmpeg != no ]]; then
         do_changeFFmpegConfig "$license"
         [[ -f ffmpeg_extra.sh ]] && source ffmpeg_extra.sh
         if enabled libvvdec; then
-            do_patch "https://raw.githubusercontent.com/wiki/fraunhoferhhi/vvdec/data/patch/v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch" am  ||
-                do_removeOptions --enable-libvvdec
+#            do_patch "https://raw.githubusercontent.com/wiki/fraunhoferhhi/vvdec/data/patch/v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch" am  ||
+#                do_removeOptions --enable-libvvdec
+            cp "$LOCALBUILDDIR"/patches/ffmpeg/v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch ./
+            git apply v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch
         fi
         if enabled libsvthevc; then
-            do_patch "https://raw.githubusercontent.com/1480c1/SVT-HEVC/master/ffmpeg_plugin/master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch" am ||
-                do_removeOption --enable-libsvthevc
+#            do_patch "https://raw.githubusercontent.com/1480c1/SVT-HEVC/master/ffmpeg_plugin/master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch" am ||
+#                do_removeOption --enable-libsvthevc
+            cp "$LOCALBUILDDIR"/patches/ffmpeg/master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch ./
+            git apply master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch
         fi
         if enabled libsvtvp9; then
-            do_patch "https://raw.githubusercontent.com/OpenVisualCloud/SVT-VP9/master/ffmpeg_plugin/master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch" am ||
-                do_removeOption --enable-libsvtvp9
+#            do_patch "https://raw.githubusercontent.com/OpenVisualCloud/SVT-VP9/master/ffmpeg_plugin/master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch" am ||
+#                do_removeOption --enable-libsvtvp9
+            cp "$LOCALBUILDDIR"/patches/ffmpeg/master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch ./
+            git apply master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch
         fi
 
         enabled libsvthevc || do_removeOption FFMPEG_OPTS_SHARED "--enable-libsvthevc"

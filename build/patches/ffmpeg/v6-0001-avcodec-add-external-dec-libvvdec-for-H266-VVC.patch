@@ -21,7 +21,7 @@ diff --git a/configure b/configure
 index b28221f258..2d8da2872f 100755
 --- a/configure
 +++ b/configure
-@@ -294,6 +294,7 @@ External library support:
+@@ -295,6 +295,7 @@ External library support:
                             native implementation exists [no]
    --enable-libvpx          enable VP8 and VP9 de/encoding via libvpx [no]
    --enable-libvvenc        enable H.266/VVC encoding via vvenc [no]
@@ -29,7 +29,7 @@ index b28221f258..2d8da2872f 100755
    --enable-libwebp         enable WebP encoding via libwebp [no]
    --enable-libx264         enable H.264 encoding via x264 [no]
    --enable-libx265         enable HEVC encoding via x265 [no]
-@@ -1968,6 +1969,7 @@ EXTERNAL_LIBRARY_LIST="
+@@ -1970,6 +1971,7 @@ EXTERNAL_LIBRARY_LIST="
      libvorbis
      libvpx
      libvvenc
@@ -37,7 +37,7 @@ index b28221f258..2d8da2872f 100755
      libwebp
      libxevd
      libxeve
-@@ -3560,6 +3562,8 @@ libvpx_vp8_encoder_deps="libvpx"
+@@ -3576,6 +3578,8 @@ libvpx_vp8_encoder_deps="libvpx"
  libvpx_vp9_decoder_deps="libvpx"
  libvpx_vp9_encoder_deps="libvpx"
  libvvenc_encoder_deps="libvvenc"
@@ -46,7 +46,7 @@ index b28221f258..2d8da2872f 100755
  libwebp_encoder_deps="libwebp"
  libwebp_anim_encoder_deps="libwebp"
  libx262_encoder_deps="libx262"
-@@ -7004,6 +7008,7 @@ enabled libvpx            && {
+@@ -7037,6 +7041,7 @@ enabled libvpx            && {
  }
  
  enabled libvvenc          && require_pkg_config libvvenc "libvvenc >= 1.6.1" "vvenc/vvenc.h" vvenc_get_version
@@ -58,7 +58,7 @@ diff --git a/libavcodec/Makefile b/libavcodec/Makefile
 index 771e2b597e..c4bec48e0d 100644
 --- a/libavcodec/Makefile
 +++ b/libavcodec/Makefile
-@@ -1154,6 +1154,7 @@ OBJS-$(CONFIG_LIBVPX_VP8_ENCODER)         += libvpxenc.o
+@@ -1162,6 +1162,7 @@ OBJS-$(CONFIG_LIBVPX_VP8_ENCODER)         += libvpxenc.o
  OBJS-$(CONFIG_LIBVPX_VP9_DECODER)         += libvpxdec.o
  OBJS-$(CONFIG_LIBVPX_VP9_ENCODER)         += libvpxenc.o
  OBJS-$(CONFIG_LIBVVENC_ENCODER)           += libvvenc.o
