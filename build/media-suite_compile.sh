@@ -2253,11 +2253,25 @@ if { { [[ $ffmpeg != no ]] && enabled_any vulkan libplacebo; } ||
     _mabs=https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/vulkan-loader
     do_pacman_install uasm
     do_uninstall "${_check[@]}"
-    #do_patch "$_mabs/0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch" am
-    do_patch "$_mabs/0002-loader-CMake-related-static-hacks.patch" am
-    do_patch "$_mabs/0003-loader-Re-add-private-libs-to-pc-file.patch" am
-    do_patch "$_mabs/0004-loader-Static-library-name-related-hacks.patch" am
-    do_patch "$_mabs/0005-loader-dllmain-related-hacks.patch" am
+#    do_patch "$_mabs/0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch" am
+#    do_patch "$_mabs/0002-loader-CMake-related-static-hacks.patch" am
+#    do_patch "$_mabs/0003-loader-Re-add-private-libs-to-pc-file.patch" am
+#    do_patch "$_mabs/0004-loader-Static-library-name-related-hacks.patch" am
+#    do_patch "$_mabs/0005-loader-dllmain-related-hacks.patch" am
+    cp "$LOCALBUILDDIR"/patches/vulkan-loader/0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch ./
+    git apply 0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch
+
+    cp "$LOCALBUILDDIR"/patches/vulkan-loader/0002-loader-CMake-related-static-hacks.patch ./
+    git apply 0002-loader-CMake-related-static-hacks.patch
+
+    cp "$LOCALBUILDDIR"/patches/vulkan-loader/0003-loader-Re-add-private-libs-to-pc-file.patch ./
+    git apply 0003-loader-Re-add-private-libs-to-pc-file.patch
+
+    cp "$LOCALBUILDDIR"/patches/vulkan-loader/0004-loader-Static-library-name-related-hacks.patch ./
+    git apply 0004-loader-Static-library-name-related-hacks.patch
+
+    cp "$LOCALBUILDDIR"/patches/vulkan-loader/0005-loader-dllmain-related-hacks.patch ./
+    git apply 0005-loader-dllmain-related-hacks.patch
 
     grep_and_sed VULKAN_LIB_SUFFIX loader/vulkan.pc.in \
             's/@VULKAN_LIB_SUFFIX@//'
