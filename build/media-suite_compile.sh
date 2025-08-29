@@ -2253,7 +2253,7 @@ if { { [[ $ffmpeg != no ]] && enabled_any vulkan libplacebo; } ||
     _mabs=https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/vulkan-loader
     do_pacman_install uasm
     do_uninstall "${_check[@]}"
-    do_patch "$_mabs/0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch" am
+    #do_patch "$_mabs/0001-pc-remove-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES.patch" am
     do_patch "$_mabs/0002-loader-CMake-related-static-hacks.patch" am
     do_patch "$_mabs/0003-loader-Re-add-private-libs-to-pc-file.patch" am
     do_patch "$_mabs/0004-loader-Static-library-name-related-hacks.patch" am

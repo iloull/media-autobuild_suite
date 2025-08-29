@@ -1784,7 +1784,7 @@ if not exist %instdir%\mintty.lnk (
         if %CC%==clang (
             echo.link.Arguments = "-full-path -clang64 -where .."
         ) else (
-            echo.link.Arguments = "-full-path -mingw -where .."
+            echo.link.Arguments = "-full-path -ucrt64 -where .."
         )
         echo.link.Description = "msys2 shell console"
         echo.link.TargetPath = "%instdir%\msys64\msys2_shell.cmd"
@@ -1827,6 +1827,7 @@ if not [%removefstab%]==[no] (
         echo.%instdir%\msys64\mingw32\ /mingw32 ntfs binary,posix=0,noacl,user 0 0
         echo.%instdir%\msys64\mingw64\ /mingw64 ntfs binary,posix=0,noacl,user 0 0
         echo.%instdir%\msys64\clang64\ /clang64 ntfs binary,posix=0,noacl,user 0 0
+        echo.%instdir%\msys64\ucrt64\  /clang64 ntfs binary,posix=0,noacl,user 0 0
         if "%build32%"=="yes" echo.%instdir%\local32\ /local32 ntfs binary,posix=0,noacl,user 0 0
         if "%build64%"=="yes" echo.%instdir%\local64\ /local64 ntfs binary,posix=0,noacl,user 0 0
     )>"%instdir%\msys64\etc\fstab."
@@ -2180,7 +2181,7 @@ setlocal
 set found=0
 if %CC%==clang (
     set "compiler=%instdir%\msys64\clang%1\bin\clang.exe"
-) else set "compiler=%instdir%\msys64\mingw%1\bin\gcc.exe"
+) else set "compiler=%instdir%\msys64\ucrt64\bin\gcc.exe"
 if exist %compiler% set found=1
 if %found%==1 GOTO :EOF
 echo.-------------------------------------------------------------------------------
@@ -2189,9 +2190,7 @@ echo.---------------------------------------------------------------------------
 if %CC%==clang (
     set prefix=mingw-w64-clang-x86_64-
 ) else (
-    if "%1"=="32" (
-        set prefix=mingw-w64-i686-
-    ) else set prefix=mingw-w64-x86_64-
+    set prefix=mingw-w64-ucrt-x86_64-
 )
 (
     echo.printf '\033]0;install %1 bit compiler\007'
