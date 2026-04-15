@@ -538,7 +538,7 @@ if [[ $mediainfo = y || $bmx = y || $curl != n ]]; then
     [[ $standalone == y ]] && _check+=(bin-global/idn2.exe)
     if do_pkgConfig "libidn2 = 2.3.8" &&
         do_wget -h f557911bf6171621e1f72ff35f5b1825bb35b52ed45325dcdee931e5d3c0787a \
-        "https://ftp.gnu.org/gnu/libidn/libidn2-2.3.8.tar.gz"; then
+        "https://mirrors.tuna.tsinghua.edu.cn/gnu/libidn/libidn2-2.3.8.tar.gz"; then
         do_uninstall "${_check[@]}"
         do_pacman_install gtk-doc
         [[ $standalone == y ]] || sed -ri 's|(bin_PROGRAMS = ).*|\1|g' src/Makefile.am
